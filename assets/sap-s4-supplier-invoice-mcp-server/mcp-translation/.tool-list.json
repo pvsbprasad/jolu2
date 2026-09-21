@@ -1,0 +1,6 @@
+[
+  {"name": "get_metadata_api_supplierinvoice_process_srv"},
+  {"name": "list_a_supplierinvoice_for_api_supplierinvoice_process_srv"},
+  {"name": "get_a_supplierinvoice_for_api_supplierinvoice_process_srv"},
+  {"name": "function_release_for_api_supplierinvoice_process_srv"}
+]

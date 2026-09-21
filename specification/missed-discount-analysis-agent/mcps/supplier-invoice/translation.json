@@ -1,0 +1,1169 @@
+{
+  "mcpTranslationVersion": "0.6",
+  "target": {
+    "ordId": "sap.s4:apiResource:API_SUPPLIERINVOICE_PROCESS_SRV:v1",
+    "type": "edmx"
+  },
+  "serverInfo": {
+    "name": "sap.mcp/api_supplierinvoice_process_srv",
+    "title": "api_supplierinvoice_process_srv",
+    "version": "1.0.0",
+    "description": "MCP server for the api_supplierinvoice_process_srv service."
+  },
+  "tools": [
+    {
+      "name": "get_metadata_api_supplierinvoice_process_srv",
+      "title": "get_metadata_api_supplierinvoice_process_srv",
+      "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+      "odataType": {
+        "metadataRequest": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "batch_for_api_supplierinvoice_process_srv",
+      "title": "batch_for_api_supplierinvoice_process_srv",
+      "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+      "odataType": {
+        "batchRequest": {},
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "list_a_supplierinvoice_for_api_supplierinvoice_process_srv",
+      "title": "list_A_SupplierInvoice_for_api_supplierinvoice_process_srv",
+      "description": "Retrieve a list of entities from the A_SupplierInvoice collection in the api_supplierinvoice_process_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_supplierinvoice_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SupplierInvoice",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_a_supplierinvoice_for_api_supplierinvoice_process_srv",
+      "title": "create_A_SupplierInvoice_for_api_supplierinvoice_process_srv",
+      "description": "Create a new instance of the A_SupplierInvoice EntitySet in the api_supplierinvoice_process_srv service. If the structure of the entity is not known, call get_metadata_api_supplierinvoice_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SupplierInvoice",
+          "crudOperation": "create",
+          "parameters": [
+            {
+              "name": "SupplierInvoice",
+              "newParameterName": "supplierinvoice"
+            },
+            {
+              "name": "FiscalYear",
+              "newParameterName": "fiscalyear"
+            },
+            {
+              "name": "CompanyCode",
+              "newParameterName": "companycode"
+            },
+            {
+              "name": "DocumentDate",
+              "newParameterName": "documentdate"
+            },
+            {
+              "name": "PostingDate",
+              "newParameterName": "postingdate"
+            },
+            {
+              "name": "CreationDate",
+              "newParameterName": "creationdate"
+            },
+            {
+              "name": "SupplierInvoiceIDByInvcgParty",
+              "newParameterName": "supplierinvoiceidbyinvcgparty"
+            },
+            {
+              "name": "InvoicingParty",
+              "newParameterName": "invoicingparty"
+            },
+            {
+              "name": "DocumentCurrency",
+              "newParameterName": "documentcurrency"
+            },
+            {
+              "name": "InvoiceGrossAmount",
+              "newParameterName": "invoicegrossamount"
+            },
+            {
+              "name": "ManualCashDiscount",
+              "newParameterName": "manualcashdiscount"
+            },
+            {
+              "name": "PaymentTerms",
+              "newParameterName": "paymentterms"
+            },
+            {
+              "name": "DueCalculationBaseDate",
+              "newParameterName": "duecalculationbasedate"
+            },
+            {
+              "name": "CashDiscount1Percent",
+              "newParameterName": "cashdiscount1percent"
+            },
+            {
+              "name": "CashDiscount1Days",
+              "newParameterName": "cashdiscount1days"
+            },
+            {
+              "name": "CashDiscount2Percent",
+              "newParameterName": "cashdiscount2percent"
+            },
+            {
+              "name": "CashDiscount2Days",
+              "newParameterName": "cashdiscount2days"
+            },
+            {
+              "name": "NetPaymentDays",
+              "newParameterName": "netpaymentdays"
+            },
+            {
+              "name": "PaymentBlockingReason",
+              "newParameterName": "paymentblockingreason"
+            },
+            {
+              "name": "SupplierInvoiceStatus",
+              "newParameterName": "supplierinvoicestatus"
+            },
+            {
+              "name": "DocumentHeaderText",
+              "newParameterName": "documentheadertext"
+            },
+            {
+              "name": "FixedCashDiscount",
+              "newParameterName": "fixedcashdiscount"
+            },
+            {
+              "name": "InvoiceReceiptDate",
+              "newParameterName": "invoicereceiptdate"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "location"
+          },
+          {
+            "name": "content-id"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "update_a_supplierinvoice_for_api_supplierinvoice_process_srv",
+      "title": "update_A_SupplierInvoice_for_api_supplierinvoice_process_srv",
+      "description": "Update an entity in A_SupplierInvoice EntitySet in the api_supplierinvoice_process_srv service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_api_supplierinvoice_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SupplierInvoice",
+          "crudOperation": "update",
+          "parameters": [
+            {
+              "name": "SupplierInvoice",
+              "newParameterName": "supplierinvoice"
+            },
+            {
+              "name": "FiscalYear",
+              "newParameterName": "fiscalyear"
+            },
+            {
+              "name": "CompanyCode",
+              "newParameterName": "companycode"
+            },
+            {
+              "name": "DocumentDate",
+              "newParameterName": "documentdate"
+            },
+            {
+              "name": "PostingDate",
+              "newParameterName": "postingdate"
+            },
+            {
+              "name": "CreationDate",
+              "newParameterName": "creationdate"
+            },
+            {
+              "name": "SupplierInvoiceIDByInvcgParty",
+              "newParameterName": "supplierinvoiceidbyinvcgparty"
+            },
+            {
+              "name": "InvoicingParty",
+              "newParameterName": "invoicingparty"
+            },
+            {
+              "name": "DocumentCurrency",
+              "newParameterName": "documentcurrency"
+            },
+            {
+              "name": "InvoiceGrossAmount",
+              "newParameterName": "invoicegrossamount"
+            },
+            {
+              "name": "ManualCashDiscount",
+              "newParameterName": "manualcashdiscount"
+            },
+            {
+              "name": "PaymentTerms",
+              "newParameterName": "paymentterms"
+            },
+            {
+              "name": "DueCalculationBaseDate",
+              "newParameterName": "duecalculationbasedate"
+            },
+            {
+              "name": "CashDiscount1Percent",
+              "newParameterName": "cashdiscount1percent"
+            },
+            {
+              "name": "CashDiscount1Days",
+              "newParameterName": "cashdiscount1days"
+            },
+            {
+              "name": "CashDiscount2Percent",
+              "newParameterName": "cashdiscount2percent"
+            },
+            {
+              "name": "CashDiscount2Days",
+              "newParameterName": "cashdiscount2days"
+            },
+            {
+              "name": "NetPaymentDays",
+              "newParameterName": "netpaymentdays"
+            },
+            {
+              "name": "PaymentBlockingReason",
+              "newParameterName": "paymentblockingreason"
+            },
+            {
+              "name": "SupplierInvoiceStatus",
+              "newParameterName": "supplierinvoicestatus"
+            },
+            {
+              "name": "DocumentHeaderText",
+              "newParameterName": "documentheadertext"
+            },
+            {
+              "name": "FixedCashDiscount",
+              "newParameterName": "fixedcashdiscount"
+            },
+            {
+              "name": "InvoiceReceiptDate",
+              "newParameterName": "invoicereceiptdate"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "delete_a_supplierinvoice_for_api_supplierinvoice_process_srv",
+      "title": "delete_A_SupplierInvoice_for_api_supplierinvoice_process_srv",
+      "description": "Delete an entity from A_SupplierInvoice EntitySet in the api_supplierinvoice_process_srv service.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SupplierInvoice",
+          "crudOperation": "delete",
+          "parameters": [
+            {
+              "name": "SupplierInvoice",
+              "newParameterName": "supplierinvoice"
+            },
+            {
+              "name": "FiscalYear",
+              "newParameterName": "fiscalyear"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_a_supplierinvoice_for_api_supplierinvoice_process_srv",
+      "title": "get_A_SupplierInvoice_for_api_supplierinvoice_process_srv",
+      "description": "Retrieve a single entity by its key from the A_SupplierInvoice collection in the api_supplierinvoice_process_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_supplierinvoice_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SupplierInvoice",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "SupplierInvoice",
+              "newParameterName": "supplierinvoice"
+            },
+            {
+              "name": "FiscalYear",
+              "newParameterName": "fiscalyear"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "count_a_supplierinvoice_for_api_supplierinvoice_process_srv",
+      "title": "count_A_SupplierInvoice_for_api_supplierinvoice_process_srv",
+      "description": "Get the total count of entities in the A_SupplierInvoice collection in the api_supplierinvoice_process_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_supplierinvoice_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SupplierInvoice",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "list_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv",
+      "title": "list_A_SuplrInvcItemPurOrdRef_for_api_supplierinvoice_process_srv",
+      "description": "Retrieve a list of entities from the A_SuplrInvcItemPurOrdRef collection in the api_supplierinvoice_process_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_supplierinvoice_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SuplrInvcItemPurOrdRef",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv",
+      "title": "create_A_SuplrInvcItemPurOrdRef_for_api_supplierinvoice_process_srv",
+      "description": "Create a new instance of the A_SuplrInvcItemPurOrdRef EntitySet in the api_supplierinvoice_process_srv service. If the structure of the entity is not known, call get_metadata_api_supplierinvoice_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SuplrInvcItemPurOrdRef",
+          "crudOperation": "create",
+          "parameters": [
+            {
+              "name": "SupplierInvoice",
+              "newParameterName": "supplierinvoice"
+            },
+            {
+              "name": "FiscalYear",
+              "newParameterName": "fiscalyear"
+            },
+            {
+              "name": "SupplierInvoiceItem",
+              "newParameterName": "supplierinvoiceitem"
+            },
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder"
+            },
+            {
+              "name": "PurchaseOrderItem",
+              "newParameterName": "purchaseorderitem"
+            },
+            {
+              "name": "DocumentCurrency",
+              "newParameterName": "documentcurrency"
+            },
+            {
+              "name": "SupplierInvoiceItemAmount",
+              "newParameterName": "supplierinvoiceitemamount"
+            },
+            {
+              "name": "IsNotCashDiscountLiable",
+              "newParameterName": "isnotcashdiscountliable"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "location"
+          },
+          {
+            "name": "content-id"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "update_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv",
+      "title": "update_A_SuplrInvcItemPurOrdRef_for_api_supplierinvoice_process_srv",
+      "description": "Update an entity in A_SuplrInvcItemPurOrdRef EntitySet in the api_supplierinvoice_process_srv service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_api_supplierinvoice_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SuplrInvcItemPurOrdRef",
+          "crudOperation": "update",
+          "parameters": [
+            {
+              "name": "SupplierInvoice",
+              "newParameterName": "supplierinvoice"
+            },
+            {
+              "name": "FiscalYear",
+              "newParameterName": "fiscalyear"
+            },
+            {
+              "name": "SupplierInvoiceItem",
+              "newParameterName": "supplierinvoiceitem"
+            },
+            {
+              "name": "PurchaseOrder",
+              "newParameterName": "purchaseorder"
+            },
+            {
+              "name": "PurchaseOrderItem",
+              "newParameterName": "purchaseorderitem"
+            },
+            {
+              "name": "DocumentCurrency",
+              "newParameterName": "documentcurrency"
+            },
+            {
+              "name": "SupplierInvoiceItemAmount",
+              "newParameterName": "supplierinvoiceitemamount"
+            },
+            {
+              "name": "IsNotCashDiscountLiable",
+              "newParameterName": "isnotcashdiscountliable"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "delete_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv",
+      "title": "delete_A_SuplrInvcItemPurOrdRef_for_api_supplierinvoice_process_srv",
+      "description": "Delete an entity from A_SuplrInvcItemPurOrdRef EntitySet in the api_supplierinvoice_process_srv service.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SuplrInvcItemPurOrdRef",
+          "crudOperation": "delete",
+          "parameters": [
+            {
+              "name": "SupplierInvoice",
+              "newParameterName": "supplierinvoice"
+            },
+            {
+              "name": "FiscalYear",
+              "newParameterName": "fiscalyear"
+            },
+            {
+              "name": "SupplierInvoiceItem",
+              "newParameterName": "supplierinvoiceitem"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv",
+      "title": "get_A_SuplrInvcItemPurOrdRef_for_api_supplierinvoice_process_srv",
+      "description": "Retrieve a single entity by its key from the A_SuplrInvcItemPurOrdRef collection in the api_supplierinvoice_process_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_supplierinvoice_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SuplrInvcItemPurOrdRef",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "SupplierInvoice",
+              "newParameterName": "supplierinvoice"
+            },
+            {
+              "name": "FiscalYear",
+              "newParameterName": "fiscalyear"
+            },
+            {
+              "name": "SupplierInvoiceItem",
+              "newParameterName": "supplierinvoiceitem"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "etag"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "count_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv",
+      "title": "count_A_SuplrInvcItemPurOrdRef_for_api_supplierinvoice_process_srv",
+      "description": "Get the total count of entities in the A_SuplrInvcItemPurOrdRef collection in the api_supplierinvoice_process_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_supplierinvoice_process_srv tool first to get the metadata.",
+      "odataType": {
+        "entitySet": {
+          "name": "A_SuplrInvcItemPurOrdRef",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    },
+    {
+      "name": "function_release_for_api_supplierinvoice_process_srv",
+      "title": "function_Release_for_api_supplierinvoice_process_srv",
+      "description": "OData function: Release in the api_supplierinvoice_process_srv service. Returns: API_SUPPLIERINVOICE_PROCESS_SRV.ReleaseInvoiceExportParameters",
+      "odataType": {
+        "operation": {
+          "name": "Release",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "SupplierInvoice",
+              "newParameterName": "supplierinvoice"
+            },
+            {
+              "name": "FiscalYear",
+              "newParameterName": "fiscalyear"
+            },
+            {
+              "name": "DiscountDaysHaveToBeShifted",
+              "newParameterName": "discountdayshavetobeshifted"
+            }
+          ]
+        },
+        "responseHeaders": [
+          {
+            "name": "age"
+          },
+          {
+            "name": "cache-control"
+          },
+          {
+            "name": "expires"
+          },
+          {
+            "name": "last-modified"
+          },
+          {
+            "name": "x-request-id"
+          },
+          {
+            "name": "x-correlation-id"
+          },
+          {
+            "name": "content-type"
+          },
+          {
+            "name": "content-encoding"
+          },
+          {
+            "name": "content-language"
+          },
+          {
+            "name": "content-length"
+          },
+          {
+            "name": "dataserviceversion"
+          },
+          {
+            "name": "sap-message"
+          }
+        ]
+      }
+    }
+  ]
+}

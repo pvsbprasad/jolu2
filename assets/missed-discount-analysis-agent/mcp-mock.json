@@ -1,0 +1,296 @@
+{
+  "servers": {
+    "s4-supplier-invoice": {
+      "mcp_server_name": "sap.mcp/api_supplierinvoice_process_srv",
+      "description": "MCP server for the api_supplierinvoice_process_srv service.",
+      "tools": {
+        "get_metadata_api_supplierinvoice_process_srv": {
+          "description": "Get metadata of the OData service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "metadata": "<EntityType Name=\"A_SupplierInvoiceType\">...</EntityType>"
+          }
+        },
+        "list_a_supplierinvoice_for_api_supplierinvoice_process_srv": {
+          "description": "Retrieve a list of supplier invoices from A_SupplierInvoice collection.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {"type": "string", "description": "OData filter expression"},
+              "select": {"type": "string", "description": "Fields to select"},
+              "orderby": {"type": "string", "description": "Order by fields"},
+              "top": {"type": "string", "description": "Maximum number of results"},
+              "skip": {"type": "string", "description": "Number of results to skip"},
+              "expand": {"type": "string", "description": "Related entities to expand"},
+              "inlinecount": {"type": "string", "description": "Include count in response"}
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "SupplierInvoice": "5100000001",
+                "FiscalYear": "2026",
+                "CompanyCode": "1000",
+                "InvoicingParty": "VENDOR001",
+                "DocumentCurrency": "USD",
+                "InvoiceGrossAmount": "15000.00",
+                "PaymentTerms": "ZB30",
+                "DueCalculationBaseDate": "/Date(1757116800000)/",
+                "CashDiscount1Percent": "2.000",
+                "CashDiscount1Days": "10",
+                "CashDiscount2Percent": "1.000",
+                "CashDiscount2Days": "20",
+                "NetPaymentDays": "30",
+                "PaymentBlockingReason": "R",
+                "SupplierInvoiceStatus": "B",
+                "DocumentHeaderText": "Invoice from Vendor001",
+                "InvoiceReceiptDate": "/Date(1756339200000)/"
+              },
+              {
+                "SupplierInvoice": "5100000002",
+                "FiscalYear": "2026",
+                "CompanyCode": "1000",
+                "InvoicingParty": "VENDOR002",
+                "DocumentCurrency": "EUR",
+                "InvoiceGrossAmount": "8500.00",
+                "PaymentTerms": "ZB14",
+                "DueCalculationBaseDate": "/Date(1757030400000)/",
+                "CashDiscount1Percent": "3.000",
+                "CashDiscount1Days": "7",
+                "CashDiscount2Percent": "0.000",
+                "CashDiscount2Days": "0",
+                "NetPaymentDays": "30",
+                "PaymentBlockingReason": "Q",
+                "SupplierInvoiceStatus": "B",
+                "DocumentHeaderText": "Invoice from Vendor002",
+                "InvoiceReceiptDate": "/Date(1756166400000)/"
+              }
+            ]
+          }
+        },
+        "get_a_supplierinvoice_for_api_supplierinvoice_process_srv": {
+          "description": "Retrieve a single supplier invoice by key.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "supplierinvoice": {"type": "string", "description": "Invoice document number"},
+              "fiscalyear": {"type": "string", "description": "Fiscal year"},
+              "select": {"type": "string", "description": "Fields to select"},
+              "expand": {"type": "string", "description": "Related entities to expand"}
+            },
+            "required": ["supplierinvoice", "fiscalyear"]
+          },
+          "mock_response": {
+            "SupplierInvoice": "5100000001",
+            "FiscalYear": "2026",
+            "CompanyCode": "1000",
+            "InvoicingParty": "VENDOR001",
+            "DocumentCurrency": "USD",
+            "InvoiceGrossAmount": "15000.00",
+            "PaymentTerms": "ZB30",
+            "DueCalculationBaseDate": "/Date(1757116800000)/",
+            "CashDiscount1Percent": "2.000",
+            "CashDiscount1Days": "10",
+            "CashDiscount2Percent": "1.000",
+            "CashDiscount2Days": "20",
+            "NetPaymentDays": "30",
+            "PaymentBlockingReason": "R",
+            "SupplierInvoiceStatus": "B"
+          }
+        },
+        "count_a_supplierinvoice_for_api_supplierinvoice_process_srv": {
+          "description": "Get total count of supplier invoices.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {"type": "string", "description": "OData filter expression"}
+            },
+            "required": []
+          },
+          "mock_response": 42
+        },
+        "list_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv": {
+          "description": "Retrieve supplier invoice items with PO reference.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {"type": "string", "description": "OData filter expression"},
+              "select": {"type": "string", "description": "Fields to select"},
+              "top": {"type": "string", "description": "Maximum number of results"},
+              "skip": {"type": "string", "description": "Number to skip"}
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "SupplierInvoice": "5100000001",
+                "FiscalYear": "2026",
+                "SupplierInvoiceItem": "000001",
+                "PurchaseOrder": "4500000123",
+                "PurchaseOrderItem": "00010",
+                "DocumentCurrency": "USD",
+                "SupplierInvoiceItemAmount": "15000.00",
+                "IsNotCashDiscountLiable": false
+              }
+            ]
+          }
+        },
+        "function_release_for_api_supplierinvoice_process_srv": {
+          "description": "Release a blocked supplier invoice.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "supplierinvoice": {"type": "string", "description": "Invoice document number"},
+              "fiscalyear": {"type": "string", "description": "Fiscal year"},
+              "discountdayshavetobeshifted": {"type": "boolean", "description": "Whether to shift discount days"}
+            },
+            "required": ["supplierinvoice", "fiscalyear"]
+          },
+          "mock_response": {
+            "Success": true
+          }
+        },
+        "batch_for_api_supplierinvoice_process_srv": {
+          "description": "Execute multiple OData operations in a batch request.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "requests": {"type": "array", "description": "Array of batch requests"}
+            },
+            "required": []
+          },
+          "mock_response": {
+            "responses": []
+          }
+        },
+        "create_a_supplierinvoice_for_api_supplierinvoice_process_srv": {
+          "description": "Create a new supplier invoice.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "companycode": {"type": "string"},
+              "documentcurrency": {"type": "string"},
+              "invoicegrossamount": {"type": "string"},
+              "documentdate": {"type": "string"},
+              "postingdate": {"type": "string"}
+            },
+            "required": ["companycode", "documentcurrency", "invoicegrossamount", "documentdate", "postingdate"]
+          },
+          "mock_response": {
+            "SupplierInvoice": "5100000099",
+            "FiscalYear": "2026"
+          }
+        },
+        "update_a_supplierinvoice_for_api_supplierinvoice_process_srv": {
+          "description": "Update a supplier invoice.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "supplierinvoice": {"type": "string"},
+              "fiscalyear": {"type": "string"}
+            },
+            "required": ["supplierinvoice", "fiscalyear"]
+          },
+          "mock_response": {}
+        },
+        "delete_a_supplierinvoice_for_api_supplierinvoice_process_srv": {
+          "description": "Delete a supplier invoice.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "supplierinvoice": {"type": "string"},
+              "fiscalyear": {"type": "string"}
+            },
+            "required": ["supplierinvoice", "fiscalyear"]
+          },
+          "mock_response": {}
+        },
+        "get_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv": {
+          "description": "Get a single supplier invoice item with PO reference.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "supplierinvoice": {"type": "string"},
+              "fiscalyear": {"type": "string"},
+              "supplierinvoiceitem": {"type": "string"}
+            },
+            "required": ["supplierinvoice", "fiscalyear", "supplierinvoiceitem"]
+          },
+          "mock_response": {
+            "SupplierInvoice": "5100000001",
+            "FiscalYear": "2026",
+            "SupplierInvoiceItem": "000001",
+            "PurchaseOrder": "4500000123",
+            "PurchaseOrderItem": "00010"
+          }
+        },
+        "count_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv": {
+          "description": "Count supplier invoice items with PO reference.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {"type": "string"}
+            },
+            "required": []
+          },
+          "mock_response": 5
+        },
+        "create_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv": {
+          "description": "Create a supplier invoice item with PO reference.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "supplierinvoice": {"type": "string"},
+              "fiscalyear": {"type": "string"},
+              "supplierinvoiceitem": {"type": "string"}
+            },
+            "required": ["supplierinvoice", "fiscalyear", "supplierinvoiceitem"]
+          },
+          "mock_response": {}
+        },
+        "update_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv": {
+          "description": "Update a supplier invoice item with PO reference.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "supplierinvoice": {"type": "string"},
+              "fiscalyear": {"type": "string"},
+              "supplierinvoiceitem": {"type": "string"}
+            },
+            "required": ["supplierinvoice", "fiscalyear", "supplierinvoiceitem"]
+          },
+          "mock_response": {}
+        },
+        "delete_a_suplrinvcitempurordref_for_api_supplierinvoice_process_srv": {
+          "description": "Delete a supplier invoice item with PO reference.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "supplierinvoice": {"type": "string"},
+              "fiscalyear": {"type": "string"},
+              "supplierinvoiceitem": {"type": "string"}
+            },
+            "required": ["supplierinvoice", "fiscalyear", "supplierinvoiceitem"]
+          },
+          "mock_response": {}
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created_for_agent": "missed-discount-analysis-agent",
+    "mock_mode": true,
+    "deterministic": true,
+    "total_servers": 1,
+    "total_tools": 15,
+    "generated_from": ["translation.json"],
+    "generation_date": "2026-09-09"
+  }
+}

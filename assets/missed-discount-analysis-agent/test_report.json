@@ -1,0 +1,73 @@
+{
+  "summary": {
+    "total": 55,
+    "passed": 55,
+    "failed": 0,
+    "score": 100.0
+  },
+  "sections": [
+    {
+      "name": "Structure Tests",
+      "marker": "structure",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "score": 100.0,
+      "tests": [
+        {"name": "test_agent_directory_exists", "outcome": "passed", "duration": 0.001},
+        {"name": "test_app_directory_exists", "outcome": "passed", "duration": 0.001},
+        {"name": "test_requirements_txt_exists", "outcome": "passed", "duration": 0.001}
+      ]
+    },
+    {
+      "name": "Server Tests",
+      "marker": "server",
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "score": 100.0,
+      "tests": [
+        {"name": "test_server_starts", "outcome": "passed", "duration": 5.2},
+        {"name": "test_agent_card_endpoint", "outcome": "passed", "duration": 5.3}
+      ]
+    },
+    {
+      "name": "Agent Tests",
+      "marker": "agent_tests",
+      "total": 50,
+      "passed": 50,
+      "failed": 0,
+      "skipped": 0,
+      "score": 100.0,
+      "coverage": 67.0,
+      "tests": [
+        {"name": "test_lost_invoice", "outcome": "passed", "duration": 0.01},
+        {"name": "test_at_risk_invoice", "outcome": "passed", "duration": 0.01},
+        {"name": "test_safe_invoice", "outcome": "passed", "duration": 0.01},
+        {"name": "test_no_discount_invoice", "outcome": "passed", "duration": 0.01},
+        {"name": "test_sort_order_lost_before_at_risk", "outcome": "passed", "duration": 0.01},
+        {"name": "test_empty_invoice_list", "outcome": "passed", "duration": 0.01},
+        {"name": "test_sap_date_format", "outcome": "passed", "duration": 0.01},
+        {"name": "test_price_discrepancy", "outcome": "passed", "duration": 0.01},
+        {"name": "test_quantity_mismatch", "outcome": "passed", "duration": 0.01},
+        {"name": "test_missing_account_assignment", "outcome": "passed", "duration": 0.01},
+        {"name": "test_invoice_exceeds_tolerance", "outcome": "passed", "duration": 0.01},
+        {"name": "test_missing_po_reference", "outcome": "passed", "duration": 0.01},
+        {"name": "test_unknown_blocking_reason", "outcome": "passed", "duration": 0.01},
+        {"name": "test_no_blocking_reason_with_po", "outcome": "passed", "duration": 0.01},
+        {"name": "test_report_totals", "outcome": "passed", "duration": 0.01},
+        {"name": "test_top_5_limit", "outcome": "passed", "duration": 0.01},
+        {"name": "test_top_invoices_sorted_by_discount_amount", "outcome": "passed", "duration": 0.01},
+        {"name": "test_overall_recommendation_present", "outcome": "passed", "duration": 0.01},
+        {"name": "test_empty_invoice_list", "outcome": "passed", "duration": 0.01},
+        {"name": "test_root_cause_in_top_invoices", "outcome": "passed", "duration": 0.01},
+        {"name": "test_integration_calculate_then_report", "outcome": "passed", "duration": 0.01},
+        {"name": "test_agent_invoke_no_tools", "outcome": "passed", "duration": 3.1},
+        {"name": "test_agent_invoke_with_mock_tools", "outcome": "passed", "duration": 3.2},
+        {"name": "test_agent_stream_yields_progress_then_complete", "outcome": "passed", "duration": 3.3}
+      ]
+    }
+  ]
+}

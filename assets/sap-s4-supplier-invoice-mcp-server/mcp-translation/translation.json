@@ -1,0 +1,19 @@
+{
+  "mcpTranslationVersion": "0.6",
+  "target": {
+    "ordId": "sap.s4:apiResource:API_SUPPLIERINVOICE_PROCESS_SRV:v1",
+    "type": "edmx"
+  },
+  "serverInfo": {
+    "name": "sap.mcp/api_supplierinvoice_process_srv",
+    "title": "api_supplierinvoice_process_srv",
+    "version": "1.0.0",
+    "description": "MCP server for the api_supplierinvoice_process_srv service."
+  },
+  "tools": [
+    {"name": "get_metadata_api_supplierinvoice_process_srv", "title": "get_metadata_api_supplierinvoice_process_srv", "description": "Get metadata of the OData service.", "odataType": {"metadataRequest": {}, "responseHeaders": []}},
+    {"name": "list_a_supplierinvoice_for_api_supplierinvoice_process_srv", "title": "list_A_SupplierInvoice_for_api_supplierinvoice_process_srv", "description": "Retrieve a list of entities from the A_SupplierInvoice collection.", "odataType": {"entitySet": {"name": "A_SupplierInvoice", "crudOperation": "read", "parameters": [{"name": "filter"}, {"name": "select"}, {"name": "orderby"}, {"name": "top"}, {"name": "skip"}, {"name": "expand"}, {"name": "inlinecount"}]}, "responseHeaders": []}},
+    {"name": "get_a_supplierinvoice_for_api_supplierinvoice_process_srv", "title": "get_A_SupplierInvoice_for_api_supplierinvoice_process_srv", "description": "Retrieve a single supplier invoice by key.", "odataType": {"entitySet": {"name": "A_SupplierInvoice", "crudOperation": "readByKey", "parameters": [{"name": "SupplierInvoice", "newParameterName": "supplierinvoice"}, {"name": "FiscalYear", "newParameterName": "fiscalyear"}, {"name": "select"}, {"name": "expand"}]}, "responseHeaders": []}},
+    {"name": "function_release_for_api_supplierinvoice_process_srv", "title": "function_Release_for_api_supplierinvoice_process_srv", "description": "Release a blocked supplier invoice.", "odataType": {"operation": {"name": "Release", "type": "function", "parameters": [{"name": "SupplierInvoice", "newParameterName": "supplierinvoice"}, {"name": "FiscalYear", "newParameterName": "fiscalyear"}, {"name": "DiscountDaysHaveToBeShifted", "newParameterName": "discountdayshavetobeshifted"}]}, "responseHeaders": []}}
+  ]
+}

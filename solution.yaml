@@ -1,0 +1,11 @@
+apiVersion: solution.sap/v1
+kind: Solution
+
+metadata:
+  name: discount-analysis-f8de0
+  version: "1.0.0"
+  description: AI agent that analyzes unmatched supplier invoices to quantify and report lost early payment discounts in accounts payable.
+
+assets:
+  - ref: ./assets/missed-discount-analysis-agent/asset.yaml
+  - ref: ./assets/sap-s4-supplier-invoice-mcp-server/asset.yaml
